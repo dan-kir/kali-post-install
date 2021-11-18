@@ -91,5 +91,55 @@ echo "####  Python3-evtx Installed  ####"
 ## Add ~/.local/bin to $PATH
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
+
+## Zsteg
+sudo gem install -y -qq zsteg
+echo "#### Zsteg Installed ####"
+
+## PNGcheck
+sudo apt install -y -qq pngcheck
+echo "#### PNGcheck Installed ####"
+
+## Steghide
+sudo apt install -y -qq steghide
+echo "#### Steghide Installed ####"
+
+## Outguess
+sudo apt install -y -qq outguess
+echo "#### Outguess Installed ####"
+
+## Stegcracker
+sudo apt install -y -qq stegcracker
+echo "#### Stegcracker Installed ####"
+
+## Stegseek
+wget https://github.com/RickdeJager/stegseek/releases/download/v0.6/stegseek_0.6-1.deb
+sudo apt install ./stegseek_0.6-1.deb
+echo "#### Stegseek Installed ####"
+
+## Gimp
+sudo apt install -y -qq gimp
+echo "#### Gimp Installed ####"
+
+## Stegsolve
+wget http://www.caesum.com/handbook/Stegsolve.jar
+echo "#### Stegsolve Installed ####"
+
+## Audacity
+sudo apt install -y -qq audacity
+echo "#### Audacity Installed ####"
+
+## Sonic-Visualiser
+sudo apt install -y -qq sonic-visualiser
+echo "#### Sonic-Visualiser Installed ####"
+
+## FcrackZIP
+
+sudo apt install -y -qq fcrackzip
+echo "#### FcrackZIP Installed ####"
+
+sudo apt install -y -qq PDFcrack
+echo "#### PDFcrack Installed ####"
+
 echo "####  Finished  ####"
 
