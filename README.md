@@ -4,13 +4,16 @@ ZSH script that updates the system and installs some tools not included in the d
 
 Installs the following:
 * APK Tool
+* Audacity
 * AutoRecon
 * Bloodhound
 * Checksec
 * Docker
 * Evil-WinRM
 * Exiftool
+* FcrackZIP
 * Filezilla
+* Gimp
 * Gobuster
 * GNU Debugger
 * Htop
@@ -18,8 +21,16 @@ Installs the following:
 * Impacket
 * NeoVIM
 * nmapAutomater
+* Outguess
+* PDFcrack
+* PNGcheck
 * Python-evtx
 * Qrencode
+* Sonic-Visualiser
+* Stegcracker
+* Steghide
+* Stegseek
+* Stegsolve
 * Tor Browser
 * Typora
 * Zbar-tools
