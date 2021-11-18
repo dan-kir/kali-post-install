@@ -23,6 +23,7 @@ Installs the following:
 * Tor Browser
 * Typora
 * Zbar-tools
+* Zsteg
 
 Setup
 -------------------
