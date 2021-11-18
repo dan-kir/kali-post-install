@@ -16,7 +16,7 @@ sudo apt install -y -qq torbrowser-launcher tor
 echo "####  Tor Browser Installed ####"
 
 ## Python PIP
-sudo apt install -y -qq python3-pip  
+sudo apt install -y -qq python3-pip
 echo "####  Python Package Installer Installed ####"
 
 ## Filezilla
@@ -113,8 +113,8 @@ sudo apt install -y -qq stegcracker
 echo "#### Stegcracker Installed ####"
 
 ## Stegseek
-wget https://github.com/RickdeJager/stegseek/releases/download/v0.6/stegseek_0.6-1.deb
-sudo apt install ./stegseek_0.6-1.deb
+sudo wget https://github.com/RickdeJager/stegseek/releases/download/v0.6/stegseek_0.6-1.deb -O /tmp/stegseek_0.6-1.deb
+sudo apt install -y -qq /tmp/stegseek_0.6-1.deb
 echo "#### Stegseek Installed ####"
 
 ## Gimp
@@ -122,7 +122,7 @@ sudo apt install -y -qq gimp
 echo "#### Gimp Installed ####"
 
 ## Stegsolve
-wget http://www.caesum.com/handbook/Stegsolve.jar
+wget http://www.caesum.com/handbook/Stegsolve.jar -O ~/.local/share/Stegsolve.jar
 echo "#### Stegsolve Installed ####"
 
 ## Audacity
@@ -134,12 +134,11 @@ sudo apt install -y -qq sonic-visualiser
 echo "#### Sonic-Visualiser Installed ####"
 
 ## FcrackZIP
-
 sudo apt install -y -qq fcrackzip
 echo "#### FcrackZIP Installed ####"
 
+## PDFcrack
 sudo apt install -y -qq PDFcrack
 echo "#### PDFcrack Installed ####"
 
 echo "####  Finished  ####"
-
