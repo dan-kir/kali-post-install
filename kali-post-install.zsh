@@ -71,6 +71,10 @@ sudo apt install -y -qq neo4j
 sudo apt install -y -qq bloodhound
 echo "####  Bloodhound Installed  ####"
 
+## Ghidra
+sudo apt install -y -qq ghidra
+echo "####  Ghidra Installed  ####"
+
 ## Evil-WinRM
 sudo gem install --silent winrm winrm-fs stringio rubyntlm
 sudo gem install --silent evil-winrm
@@ -138,7 +142,7 @@ sudo apt install -y -qq fcrackzip
 echo "#### FcrackZIP Installed ####"
 
 ## PDFcrack
-sudo apt install -y -qq PDFcrack
+sudo apt install -y -qq pdfcrack
 echo "#### PDFcrack Installed ####"
 
 echo "####  Finished  ####"
