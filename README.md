@@ -13,18 +13,22 @@ Installs the following:
 * Exiftool
 * FcrackZIP
 * Filezilla
+* Ghidra
 * Gimp
 * Gobuster
 * GNU Debugger
 * Htop
 * Imagemagick
 * Impacket
+* LibreOffice
 * NeoVIM
 * nmapAutomater
 * Outguess
 * PDFcrack
 * PNGcheck
+* PwnTools
 * Python-evtx
+* Qemu-user-static
 * Qrencode
 * Sonic-Visualiser
 * Stegcracker

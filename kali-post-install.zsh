@@ -7,13 +7,17 @@ sudo apt dist-upgrade -y -qq
 sudo apt autoremove -y -qq
 echo "####  System updated  ####"
 
-## Essentials
-sudo apt install -y -qq htop neovim checksec
-echo "####  Essential packages Installed  ####"
+## Miscellaneous
+sudo apt install -y -qq htop neovim checksec qemu-user-static
+echo "####  Miscellaneous packages Installed  ####"
 
 ## Tor Browser
 sudo apt install -y -qq torbrowser-launcher tor
 echo "####  Tor Browser Installed ####"
+
+## Libre Office
+sudo apt install -y -qq libreoffice
+echo "####  Libre Office Installed ####"
 
 ## Python PIP
 sudo apt install -y -qq python3-pip
@@ -91,6 +95,9 @@ echo "####  Android Tools Installed  ####"
 ## Python-evtx
 sudo apt install -y -qq python3-evtx
 echo "####  Python3-evtx Installed  ####"
+
+## PwnTools
+pip3 install --quiet pwntools
 
 ## Add ~/.local/bin to $PATH
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
