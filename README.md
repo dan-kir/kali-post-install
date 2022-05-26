@@ -20,20 +20,25 @@ Installs the following:
 * Htop
 * Imagemagick
 * Impacket
+* JWCrypto
 * LibreOffice
 * NeoVIM
 * nmapAutomater
+* OpenJDK
 * Outguess
 * PDFcrack
 * PNGcheck
+* Powershell
 * PwnTools
 * Python-evtx
 * Qemu-user-static
 * Qrencode
+* RsaCtfTool
 * Sonic-Visualiser
 * Stegcracker
 * Steghide
 * Stegseek
+* Stegsnow
 * Stegsolve
 * Tor Browser
 * Typora

@@ -15,6 +15,13 @@ echo "####  Miscellaneous packages Installed  ####"
 sudo apt install -y -qq torbrowser-launcher tor
 echo "####  Tor Browser Installed ####"
 
+## RsaCtfTool
+cd /opt
+sudo git clone --quiet https://github.com/Ganapati/RsaCtfTool.git
+sudo apt install  -y -qq libgmp3-dev libmpc-dev
+cd RsaCtfTool
+pip3 install --quiet -r "requirements.txt"
+
 ## Libre Office
 sudo apt install -y -qq libreoffice
 echo "####  Libre Office Installed ####"
@@ -45,12 +52,12 @@ sudo apt install -y -qq snmp-mibs-downloader
 echo "####  SNMP Tools Installed  ####"
 
 ## Typora
-sudo wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-sudo apt install -y -qq software-properties-common
-sudo add-apt-repository 'deb https://typora.io/linux ./'
-sudo apt update -y -qq
-sudo apt install -y -qq typora
-echo "####  Typora Installed  ####"
+#sudo wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+#sudo apt install -y -qq software-properties-common
+#sudo add-apt-repository 'deb https://typora.io/linux ./'
+#sudo apt update -y -qq
+#sudo apt install -y -qq typora
+#echo "####  Typora Installed  ####"
 
 ## AutoRecon
 pip3 install --quiet git+https://github.com/Tib3rius/AutoRecon.git
@@ -73,6 +80,8 @@ echo "####  Impacket Installed  ####"
 ## Bloodhound
 sudo apt install -y -qq neo4j
 sudo apt install -y -qq bloodhound
+sudo mkdir -p /usr/share/neo4j/logs
+sudo touch /usr/share/neo4j/logs/neo4j.log
 echo "####  Bloodhound Installed  ####"
 
 ## Ghidra
@@ -99,9 +108,21 @@ echo "####  Python3-evtx Installed  ####"
 ## PwnTools
 pip3 install --quiet pwntools
 
-## Add ~/.local/bin to $PATH
-echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
-. ~/.zshrc
+## Powershell
+sudo apt install -y -qq powershell
+echo "#### Powershell Installed ####"
+
+## OpenJDK and Maven
+sudo apt install -y -qq openjdk-11-jdk
+sudo apt install -y -qq maven
+cd /opt
+sudo git clone --quiet https://github.com/veracode-research/rogue-jndi
+cd /opt/rogue
+smvn package
+
+## JWCrypto
+sudo apt install -y -qq python3-jwcrypto
+echo "#### JWCrypto Installed"
 
 ## Zsteg
 sudo gem install -y -qq zsteg
@@ -122,6 +143,10 @@ echo "#### Outguess Installed ####"
 ## Stegcracker
 sudo apt install -y -qq stegcracker
 echo "#### Stegcracker Installed ####"
+
+## Stegsnow
+sudo apt install -y -qq stegsnow
+echo "#### Stegsnow Installed ####"
 
 ## Stegseek
 sudo wget https://github.com/RickdeJager/stegseek/releases/download/v0.6/stegseek_0.6-1.deb -O /tmp/stegseek_0.6-1.deb
@@ -151,5 +176,9 @@ echo "#### FcrackZIP Installed ####"
 ## PDFcrack
 sudo apt install -y -qq pdfcrack
 echo "#### PDFcrack Installed ####"
+
+## Add ~/.local/bin to $PATH
+echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
+. ~/.zshrc
 
 echo "####  Finished  ####"
