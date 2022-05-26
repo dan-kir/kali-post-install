@@ -117,15 +117,15 @@ sudo apt install -y -qq openjdk-11-jdk
 sudo apt install -y -qq maven
 cd /opt
 sudo git clone --quiet https://github.com/veracode-research/rogue-jndi
-cd /opt/rogue
-smvn package
+cd /opt/rogue-jndi
+sudo mvn package
 
 ## JWCrypto
 sudo apt install -y -qq python3-jwcrypto
 echo "#### JWCrypto Installed"
 
 ## Zsteg
-sudo gem install -y -qq zsteg
+sudo gem install --silent zsteg
 echo "#### Zsteg Installed ####"
 
 ## PNGcheck
