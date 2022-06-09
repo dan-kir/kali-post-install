@@ -16,11 +16,6 @@ echo "####  Miscellaneous packages Installed  ####"
 sudo apt install -y -qq torbrowser-launcher tor
 echo "####  Tor Browser Installed ####"
 
-## Google Chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-echo "### Google Chrome Installed ####"
-
 ## RsaCtfTool
 cd /opt
 sudo git clone --quiet https://github.com/Ganapati/RsaCtfTool.git
