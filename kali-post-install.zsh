@@ -186,7 +186,3 @@ sudo su
 npm install -g -s infoooze
 echo "#### InfoOze installed####"
 
-## Leafpad
-sudo apt install leafpad
-echo "#### leafpad installed ####"
-echo "####  Finished  ####"
