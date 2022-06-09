@@ -9,11 +9,17 @@ echo "####  System updated  ####"
 
 ## Miscellaneous
 sudo apt install -y -qq htop neovim checksec qemu-user-static
+sudo apt install geany -y
 echo "####  Miscellaneous packages Installed  ####"
 
 ## Tor Browser
 sudo apt install -y -qq torbrowser-launcher tor
 echo "####  Tor Browser Installed ####"
+
+## Google Chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+echo "### Google Chrome Installed ####"
 
 ## RsaCtfTool
 cd /opt
@@ -52,12 +58,12 @@ sudo apt install -y -qq snmp-mibs-downloader
 echo "####  SNMP Tools Installed  ####"
 
 ## Typora
-#sudo wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-#sudo apt install -y -qq software-properties-common
-#sudo add-apt-repository 'deb https://typora.io/linux ./'
-#sudo apt update -y -qq
-#sudo apt install -y -qq typora
-#echo "####  Typora Installed  ####"
+sudo wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+sudo apt install -y -qq software-properties-common
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt update -y -qq
+sudo apt install -y -qq typora
+echo "####  Typora Installed  ####"
 
 ## AutoRecon
 pip3 install --quiet git+https://github.com/Tib3rius/AutoRecon.git
