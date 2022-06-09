@@ -5,7 +5,7 @@
 sudo apt update -y -qq && sudo apt upgrade -y -qq
 sudo apt dist-upgrade -y -qq
 sudo apt autoremove -y -qq
-echo "####  System updated  ####"
+echo "#########  System updated  ####"
 
 ## Miscellaneous
 sudo apt install -y -qq htop neovim checksec qemu-user-static
