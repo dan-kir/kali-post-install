@@ -181,4 +181,12 @@ echo "#### PDFcrack Installed ####"
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
 
+## Leafpad
+sudo apt install leafpad
+echo "### Leafpad Installed ###"
+
+## infoooze
+sudo npm install -g -s infoooze
+echo "### Infoooze Installed ###"
+
 echo "####  Finished  ####"
