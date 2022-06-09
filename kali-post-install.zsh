@@ -177,6 +177,11 @@ echo "#### FcrackZIP Installed ####"
 sudo apt install -y -qq pdfcrack
 echo "#### PDFcrack Installed ####"
 
+## PyBelt
+git clone https://github.com/ekultek/pybelt.git
+cd pybelt
+pip install -r requirements.txt
+
 ## Add ~/.local/bin to $PATH
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
