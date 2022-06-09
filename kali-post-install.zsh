@@ -3,8 +3,8 @@
 
 ## System Updates / Upgrades
 sudo apt update -y -qq && sudo apt upgrade -y -qq
-sudo apt dist-upgrade -y -qq
 sudo apt autoremove -y -qq
+sudo apt dist-upgrade -y -qq
 echo "####  System updated  ####"
 
 ## Miscellaneous
@@ -180,5 +180,14 @@ echo "#### PDFcrack Installed ####"
 ## Add ~/.local/bin to $PATH
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
+
+## Visual Studio Code
+sudo apt install software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt install code
+echo "#### Visual Studio Code Installed ###"
+
+
 
 echo "####  Finished  ####"
