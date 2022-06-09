@@ -1,7 +1,7 @@
 #!/bin/zsh
 ## Kali Post-Installation Script
 
-## System Updates / Upgrades
+## #####System Updates / Upgrades
 sudo apt update -y -qq && sudo apt upgrade -y -qq
 sudo apt dist-upgrade -y -qq
 sudo apt autoremove -y -qq
