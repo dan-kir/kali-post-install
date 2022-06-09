@@ -5,6 +5,8 @@
 sudo apt update -y -qq && sudo apt upgrade -y -qq
 sudo apt dist-upgrade -y -qq
 sudo apt autoremove -y -qq
+sudo dnf -upgrade python3-setuptools
+python -m pip install upgrade pip
 echo "####  System updated  ####"
 
 ## Miscellaneous
@@ -15,12 +17,25 @@ echo "####  Miscellaneous packages Installed  ####"
 sudo apt install -y -qq torbrowser-launcher tor
 echo "####  Tor Browser Installed ####"
 
-## RsaCtfTool
-cd /opt
-sudo git clone --quiet https://github.com/Ganapati/RsaCtfTool.git
-sudo apt install  -y -qq libgmp3-dev libmpc-dev
+## RsaCtfTool (includes mpfr, and mpc)
+v= 4.0.2
+wget http://www.mpfr.org/mpfr-current/mpfr-${v}.tar.bz2 
+tar-jxvf mpfr-${v}.tar.bz2 && cd mpfr- ${v} 
+./configure 
+make && make install
+v=1.1.0
+wget ftp://ftp.gnu.org/gnu/mpc/mpc-${v}.tar.gz
+tar -zxvf mpc-${v}.tar.gz && cd mpc-${v}
+./configure
+make && make install
+git clone https://github.com/Ganapati/RsaCtfTool.git
 cd RsaCtfTool
-pip3 install --quiet -r "requirements.txt"
+pip install -r requirements.txt
+echo "#### RsaCtfTool installed ####"
+
+## BS4
+sudo apt-get install python3-bs4
+echo "#### beautiful soup 4 installed ####"
 
 ## Libre Office
 sudo apt install -y -qq libreoffice
@@ -29,6 +44,10 @@ echo "####  Libre Office Installed ####"
 ## Python PIP
 sudo apt install -y -qq python3-pip
 echo "####  Python Package Installer Installed ####"
+
+## PIPx
+python3 -m pip install pipx
+echo "#### pipx installed ####"
 
 ## Filezilla
 sudo apt install -y -qq filezilla
@@ -52,12 +71,12 @@ sudo apt install -y -qq snmp-mibs-downloader
 echo "####  SNMP Tools Installed  ####"
 
 ## Typora
-#sudo wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-#sudo apt install -y -qq software-properties-common
-#sudo add-apt-repository 'deb https://typora.io/linux ./'
-#sudo apt update -y -qq
-#sudo apt install -y -qq typora
-#echo "####  Typora Installed  ####"
+sudo wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+sudo apt install -y -qq software-properties-common
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt update -y -qq
+sudo apt install -y -qq typora
+echo "####  Typora Installed  ####"
 
 ## AutoRecon
 pip3 install --quiet git+https://github.com/Tib3rius/AutoRecon.git
@@ -154,7 +173,9 @@ sudo apt install -y -qq /tmp/stegseek_0.6-1.deb
 echo "#### Stegseek Installed ####"
 
 ## Gimp
-sudo apt install -y -qq gimp
+sudo apt install libmpc-dev
+sudo apt install python3-pip
+pip3 install --user gmpy2==2.1.0a2
 echo "#### Gimp Installed ####"
 
 ## Stegsolve
@@ -181,4 +202,8 @@ echo "#### PDFcrack Installed ####"
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
 
-echo "####  Finished  ####"
+## Hydra
+sudo apt-get install hydra-gtk
+echo "#### Hydra installed ####"
+
+echo "####  Finished  ####
