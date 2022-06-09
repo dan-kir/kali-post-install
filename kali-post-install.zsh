@@ -189,6 +189,4 @@ echo "#### stacer installed ####"
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
 
-####test
-
 echo "####  Finished  ####"
