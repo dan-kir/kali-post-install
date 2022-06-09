@@ -181,4 +181,10 @@ echo "#### PDFcrack Installed ####"
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
 
+## wxHexEditor
+echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
+sudo apt install -y -qq wxhexeditor
+echo "#### wxhexeditor Installed ####"
+
+
 echo "####  Finished  ####"
