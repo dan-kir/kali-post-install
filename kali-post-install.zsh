@@ -154,7 +154,7 @@ sudo apt install -y -qq /tmp/stegseek_0.6-1.deb
 echo "#### Stegseek Installed ####"
 
 ## Gimp
-sudo apt install -y -qq gimp
+sudo apt-get -y install gimp
 echo "#### Gimp Installed ####"
 
 ## Stegsolve
