@@ -52,12 +52,12 @@ sudo apt install -y -qq snmp-mibs-downloader
 echo "####  SNMP Tools Installed  ####"
 
 ## Typora
-#sudo wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-#sudo apt install -y -qq software-properties-common
-#sudo add-apt-repository 'deb https://typora.io/linux ./'
-#sudo apt update -y -qq
-#sudo apt install -y -qq typora
-#echo "####  Typora Installed  ####"
+sudo wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+sudo apt install -y -qq software-properties-common
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt update -y -qq
+sudo apt install -y -qq typora
+echo "####  Typora Installed  ####"
 
 ## AutoRecon
 pip3 install --quiet git+https://github.com/Tib3rius/AutoRecon.git
