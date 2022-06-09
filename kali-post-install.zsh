@@ -175,3 +175,4 @@ echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
 
 echo "####  Finished  ####"
+TEST 500000
