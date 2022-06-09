@@ -181,4 +181,12 @@ echo "#### PDFcrack Installed ####"
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
 
+## LeafPad
+sudo apt install -y -qq leafpad 
+echo "#### LeafPad Installed ####"
+
+## Visual Studio
+sudo apt install -y -qq VS Code
+echo "#### Visual Studio Installed ####"
+
 echo "####  Finished  ####"
