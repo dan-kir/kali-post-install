@@ -1,6 +1,27 @@
 #!/bin/zsh
 ## Kali Post-Installation Script
 
+
+
+
+
+
+
+#TESTING THIS SHIT!!!!!!!!!!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## System Updates / Upgrades
 sudo apt update -y -qq && sudo apt upgrade -y -qq
 sudo apt dist-upgrade -y -qq
