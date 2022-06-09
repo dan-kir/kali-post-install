@@ -52,11 +52,11 @@ sudo apt install -y -qq snmp-mibs-downloader
 echo "####  SNMP Tools Installed  ####"
 
 ## Typora
-#sudo wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-#sudo apt install -y -qq software-properties-common
-#sudo add-apt-repository 'deb https://typora.io/linux ./'
-#sudo apt update -y -qq
-#sudo apt install -y -qq typora
+sudo wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+sudo apt install -y -qq software-properties-common
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt update -y -qq
+sudo apt install -y -qq typora
 #echo "####  Typora Installed  ####"
 
 ## AutoRecon
@@ -176,6 +176,14 @@ echo "#### FcrackZIP Installed ####"
 ## PDFcrack
 sudo apt install -y -qq pdfcrack
 echo "#### PDFcrack Installed ####"
+
+##leafpad
+sudo apt-get install leafpad
+echo "#### leafpad Installed ####"
+
+##stacer 
+sudo apt install stacer 
+echo "#### stacer installed ####"
 
 ## Add ~/.local/bin to $PATH
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
