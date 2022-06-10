@@ -181,4 +181,8 @@ echo "#### PDFcrack Installed ####"
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
 
+## Add leafpad
+sudo apt install leafpad -y
+echo "#### Leafpad Installed"
+
 echo "####  Finished  ####"
