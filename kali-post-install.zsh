@@ -185,4 +185,4 @@ echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
 sudo apt install leafpad -y
 echo "#### Leafpad Installed"
 
-echo "####  Finished  ####"
+echo "  Finished  "
