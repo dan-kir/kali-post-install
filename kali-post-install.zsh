@@ -177,6 +177,16 @@ echo "#### FcrackZIP Installed ####"
 sudo apt install -y -qq pdfcrack
 echo "#### PDFcrack Installed ####"
 
+## linPEAS
+mkdir -p ~/Downloads/tools
+cd ~/Downloads/tools
+git clone https://github.com/carlospolop/PEASS-ng.git
+echo '#### linPEAS scripts downloaded ####'
+
+## Linux Smart Enumeration
+git clone https://github.com/diego-treitos/linux-smart-enumeration.git
+echo '#### Linux Smart Enumeration script downloaded ####'
+
 ## Add ~/.local/bin to $PATH
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
