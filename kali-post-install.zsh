@@ -177,6 +177,9 @@ echo "#### FcrackZIP Installed ####"
 sudo apt install -y -qq pdfcrack
 echo "#### PDFcrack Installed ####"
 
+
+##Adding some text to the bottom##
+
 ## Add ~/.local/bin to $PATH
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
 . ~/.zshrc
