@@ -10,6 +10,7 @@ Installs the following:
 * AutoRecon
 * Bloodhound
 * Checksec
+* DeTTECT
 * Docker
 * Evil-WinRM
 * Exiftool
@@ -26,6 +27,7 @@ Installs the following:
 * LibreOffice
 * NeoVIM
 * nmapAutomater
+* Ngrok
 * OpenJDK
 * Outguess
 * PDFcrack
@@ -43,7 +45,8 @@ Installs the following:
 * Stegsnow
 * Stegsolve
 * Tor Browser
-* Typora
+* Volatility 2.6
+* Volatility 3
 * Zbar-tools
 * Zsteg
 

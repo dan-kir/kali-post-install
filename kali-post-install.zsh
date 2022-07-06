@@ -51,14 +51,6 @@ echo "####  Gnu Debugger (GDB) Installed  ####"
 sudo apt install -y -qq snmp-mibs-downloader
 echo "####  SNMP Tools Installed  ####"
 
-## Typora
-#sudo wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-#sudo apt install -y -qq software-properties-common
-#sudo add-apt-repository 'deb https://typora.io/linux ./'
-#sudo apt update -y -qq
-#sudo apt install -y -qq typora
-#echo "####  Typora Installed  ####"
-
 ## AutoRecon
 pip3 install --quiet git+https://github.com/Tib3rius/AutoRecon.git
 echo "####  AutoRecon Installed  ####"
@@ -70,10 +62,10 @@ sudo ln -s ~/.local/share/nmapAutomator/nmapAutomator.sh /usr/local/bin
 echo "####  nmapAutomator Installed  ####"
 
 ## Impacket
-wget -q https://github.com/SecureAuthCorp/impacket/releases/download/impacket_0_9_24/impacket-0.9.24.tar.gz -O ~/.local/share/impacket-0.9.24.tar.gz
-tar -xf ~/.local/share/impacket-0.9.24.tar.gz -C ~/.local/share/
-rm ~/.local/share/impacket-0.9.24.tar.gz
-cd ~/.local/share/impacket-0.9.24
+wget -q https://github.com/SecureAuthCorp/impacket/releases/download/impacket_0_10_0/impacket-0.10.0.tar.gz -O ~/.local/share/impacket-0.10.0.tar.gz
+tar -xf ~/.local/share/impacket-0.10.0.tar.gz -C ~/.local/share/
+rm ~/.local/share/impacket-0.10.0.tar.gz
+cd ~/.local/share/impacket-0.10.0
 pip3 install --quiet .
 echo "####  Impacket Installed  ####"
 
@@ -95,6 +87,8 @@ echo "####  Evil-WinRM Installed  ####"
 
 ## Docker
 sudo apt install -y -qq docker.io
+sudo systemctl enable docker --now
+sudo usermod -aG docker $USER
 echo "####  Docker Installed  ####"
 
 ## Android Tools
@@ -176,6 +170,40 @@ echo "#### FcrackZIP Installed ####"
 ## PDFcrack
 sudo apt install -y -qq pdfcrack
 echo "#### PDFcrack Installed ####"
+
+## Ngrok
+curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null
+echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list
+sudo apt update -y -qq
+sudo apt install -y -qq ngrok
+echo "#### Ngrok Installed ####"
+
+## DeTTECT
+docker pull rabobankcdc/dettect:latest
+echo "#### DeTTECT Installed ####"
+
+## Volatility 2.6
+sudo apt install -y -qq python-pip pcregrep libpcre++-dev python-dev
+pip2 install --quiet --upgrade setuptools
+pip2 install --quiet pycrypto
+pip2 install --quiet distorm3
+sudo wget http://downloads.volatilityfoundation.org/releases/2.6/volatility-2.6.zip -O /opt/volatility2.zip
+cd /opt
+sudo unzip volatility2.zip
+cd /opt/volatility-master
+sudo python2 setup.py install
+echo "#### Volatility 2.6 Installed ####"
+
+## Volatility 3
+cd /opt
+sudo git clone https://github.com/volatilityfoundation/volatility3.git
+cd /opt/volatility3
+pip3 install --quiet -r "requirements.txt"
+sudo python3 setup.py build
+sudo python3 setup.py install
+sudo wget https://downloads.volatilityfoundation.org/volatility3/symbols/windows.zip -O /opt/volatility3
+sudo wget https://downloads.volatilityfoundation.org/volatility3/symbols/linux.zip -O /opt/volatility3
+echo "#### Volatility 3 Installed ####"
 
 ## Add ~/.local/bin to $PATH
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
