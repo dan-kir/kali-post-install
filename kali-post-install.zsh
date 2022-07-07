@@ -207,8 +207,9 @@ cd /opt/volatility3
 pip3 install --quiet -r "requirements.txt"
 sudo python3 setup.py build
 sudo python3 setup.py install
-sudo wget https://downloads.volatilityfoundation.org/volatility3/symbols/windows.zip -O /opt/volatility3
-sudo wget https://downloads.volatilityfoundation.org/volatility3/symbols/linux.zip -O /opt/volatility3
+sudo wget https://downloads.volatilityfoundation.org/volatility3/symbols/windows.zip -O /opt/volatility3/volatility3/symbols/windows.zip
+sudo wget https://downloads.volatilityfoundation.org/volatility3/symbols/linux.zip -O /opt/volatility3/volatility3/symbols/linux.zip
+sudo wget https://downloads.volatilityfoundation.org/volatility3/symbols/mac.zip -O /opt/volatility3/volatility3/symbols/mac.zip
 echo "#### Volatility 3 Installed ####"
 
 ## Android Tools
