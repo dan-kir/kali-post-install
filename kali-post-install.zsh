@@ -87,12 +87,6 @@ sudo gem install --silent winrm winrm-fs stringio rubyntlm
 sudo gem install --silent evil-winrm
 echo "####  Evil-WinRM Installed  ####"
 
-## Docker
-sudo apt install -y -qq docker.io
-sudo systemctl enable docker --now
-sudo usermod -aG docker $USER
-echo "####  Docker Installed  ####"
-
 ## Python-evtx
 sudo apt install -y -qq python3-evtx
 echo "####  Python3-evtx Installed  ####"
@@ -210,6 +204,12 @@ echo "#### Volatility 3 Installed ####"
 ## Android Tools
 sudo apt install -y -qq apktool
 echo "####  Android Tools Installed  ####"
+
+## Docker
+sudo apt install -y -qq docker.io
+sudo systemctl enable docker --now
+sudo usermod -aG docker $USER
+echo "####  Docker Installed  ####"
 
 ## Add ~/.local/bin to $PATH
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
