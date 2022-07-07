@@ -50,11 +50,11 @@ echo "source /usr/share/gdb-peda/peda.py" >> ~/.gdbinit
 echo "####  Gnu Debugger (GDB) Installed  ####"
 
 ## SNMP Tools
-sudo apt install -y -qq --no-warn-script-location snmp-mibs-downloader
+sudo apt install -y -qq snmp-mibs-downloader
 echo "####  SNMP Tools Installed  ####"
 
 ## AutoRecon
-pip3 install --quiet git+https://github.com/Tib3rius/AutoRecon.git
+pip3 install --quiet --no-warn-script-location git+https://github.com/Tib3rius/AutoRecon.git
 echo "####  AutoRecon Installed  ####"
 
 ## nmapAutomater
@@ -93,19 +93,16 @@ sudo systemctl enable docker --now
 sudo usermod -aG docker $USER
 echo "####  Docker Installed  ####"
 
-## Android Tools
-sudo apt install -y -qq apktool
-echo "####  Android Tools Installed  ####"
-
 ## Python-evtx
 sudo apt install -y -qq python3-evtx
 echo "####  Python3-evtx Installed  ####"
 
 ## PwnTools
-pip3 install --quiet pwntools
+pip3 install --quiet --no-warn-script-location pwntools
+echo "#### PwnTools Installed ####"
 
 ## Powershell
-sudo apt install -y -qq --no-warn-script-location powershell
+sudo apt install -y -qq powershell
 echo "#### Powershell Installed ####"
 
 ## OpenJDK and Maven
@@ -115,6 +112,7 @@ cd /opt
 sudo git clone --quiet https://github.com/veracode-research/rogue-jndi
 cd /opt/rogue-jndi
 sudo mvn package
+echo "#### OpenJDK Installed"
 
 ## JWCrypto
 sudo apt install -y -qq python3-jwcrypto
@@ -208,6 +206,10 @@ sudo python3 setup.py install
 sudo wget https://downloads.volatilityfoundation.org/volatility3/symbols/windows.zip -O /opt/volatility3
 sudo wget https://downloads.volatilityfoundation.org/volatility3/symbols/linux.zip -O /opt/volatility3
 echo "#### Volatility 3 Installed ####"
+
+## Android Tools
+sudo apt install -y -qq apktool
+echo "####  Android Tools Installed  ####"
 
 ## Add ~/.local/bin to $PATH
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
