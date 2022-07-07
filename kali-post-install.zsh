@@ -165,6 +165,16 @@ echo "#### FcrackZIP Installed ####"
 sudo apt install -y -qq pdfcrack
 echo "#### PDFcrack Installed ####"
 
+## Sliver
+sudo apt install -y -qq sliver
+echo "#### Sliver Installed ####"
+
+## Redpoint Nmap Scripts
+cd /tmp
+git clone https://github.com/digitalbond/Redpoint
+sudo mv Redpoint/*.nse /usr/share/nmap/scripts
+echo "#### Redpoint Installed ####"
+
 ## Ngrok
 curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null
 echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list
