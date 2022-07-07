@@ -20,7 +20,9 @@ cd /opt
 sudo git clone --quiet https://github.com/Ganapati/RsaCtfTool.git
 sudo apt install  -y -qq libgmp3-dev libmpc-dev
 cd RsaCtfTool
+pip3 install --quiet -r gmpy2
 pip3 install --quiet -r "requirements.txt"
+echo "####  RsaCtfTool Installed ####"
 
 ## Libre Office
 sudo apt install -y -qq libreoffice
@@ -48,7 +50,7 @@ echo "source /usr/share/gdb-peda/peda.py" >> ~/.gdbinit
 echo "####  Gnu Debugger (GDB) Installed  ####"
 
 ## SNMP Tools
-sudo apt install -y -qq snmp-mibs-downloader
+sudo apt install -y -qq --no-warn-script-location snmp-mibs-downloader
 echo "####  SNMP Tools Installed  ####"
 
 ## AutoRecon
@@ -103,7 +105,7 @@ echo "####  Python3-evtx Installed  ####"
 pip3 install --quiet pwntools
 
 ## Powershell
-sudo apt install -y -qq powershell
+sudo apt install -y -qq --no-warn-script-location powershell
 echo "#### Powershell Installed ####"
 
 ## OpenJDK and Maven
@@ -179,22 +181,24 @@ sudo apt install -y -qq ngrok
 echo "#### Ngrok Installed ####"
 
 ## DeTTECT
-docker pull rabobankcdc/dettect:latest
+sudo docker pull rabobankcdc/dettect:latest
 echo "#### DeTTECT Installed ####"
 
 ## Volatility 2.6
-sudo apt install -y -qq python-pip pcregrep libpcre++-dev python-dev
+sudo apt install -y -qq python-pip pcregrep libpcre++-dev python2-dev
 pip2 install --quiet --upgrade setuptools
 pip2 install --quiet pycrypto
 pip2 install --quiet distorm3
 sudo wget http://downloads.volatilityfoundation.org/releases/2.6/volatility-2.6.zip -O /opt/volatility2.zip
 cd /opt
 sudo unzip volatility2.zip
+sudo rm /opt/volatility2.zip
 cd /opt/volatility-master
 sudo python2 setup.py install
 echo "#### Volatility 2.6 Installed ####"
 
 ## Volatility 3
+sudo apt install -y -qq python3-pip
 cd /opt
 sudo git clone https://github.com/volatilityfoundation/volatility3.git
 cd /opt/volatility3
