@@ -15,6 +15,10 @@ echo "####  Miscellaneous packages Installed  ####"
 sudo apt install -y -qq torbrowser-launcher tor
 echo "####  Tor Browser Installed ####"
 
+## Termshark
+sudo apt install -y -qq termshark
+echo "####  Termshark Installed ####"
+
 ## RsaCtfTool
 cd /opt
 sudo git clone --quiet https://github.com/Ganapati/RsaCtfTool.git
@@ -186,6 +190,15 @@ echo "#### Ngrok Installed ####"
 sudo docker pull rabobankcdc/dettect:latest
 echo "#### DeTTECT Installed ####"
 
+## MobSF
+sudo apt install -y -qq git python3-dev python3-venv python3-pip build-essential libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg8-dev zlib1g-dev wkhtmltopdf
+sudo apt install -y -qq openjdk-8-jdk
+cd /opt
+sudo git clone --quiet https://github.com/MobSF/Mobile-Security-Framework-MobSF.git
+cd Mobile-Security-Framework-MobSF
+sudo ./setup.sh
+echo "#### Mobile Security Framework Installed ####"
+
 ## Volatility 2.6
 sudo apt install -y -qq python-pip pcregrep libpcre++-dev python2-dev
 pip2 install --quiet --upgrade setuptools
@@ -209,8 +222,13 @@ sudo python3 setup.py build
 sudo python3 setup.py install
 sudo wget https://downloads.volatilityfoundation.org/volatility3/symbols/windows.zip -O /opt/volatility3/volatility3/symbols/windows.zip
 sudo wget https://downloads.volatilityfoundation.org/volatility3/symbols/linux.zip -O /opt/volatility3/volatility3/symbols/linux.zip
-sudo wget https://downloads.volatilityfoundation.org/volatility3/symbols/mac.zip -O /opt/volatility3/volatility3/symbols/mac.zip
+#sudo wget https://downloads.volatilityfoundation.org/volatility3/symbols/mac.zip -O /opt/volatility3/volatility3/symbols/mac.zip
 echo "#### Volatility 3 Installed ####"
+
+## Detect-It-Easy
+sudo wget https://github.com/horsicq/DIE-engine/releases/download/3.05/Detect_It_Easy-3.05-x86_64.AppImage -O /opt/Detect_It_Easy.AppImage
+sudo chmod +x /opt/Detect_It_Easy.AppImage
+echo "####  Detect-It-Easy Installed  ####"
 
 ## Android Tools
 sudo apt install -y -qq apktool

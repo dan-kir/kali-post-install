@@ -25,6 +25,7 @@ Installs the following:
 * Impacket
 * JWCrypto
 * LibreOffice
+* Mobile Security Framework
 * NeoVIM
 * nmapAutomater
 * Ngrok
@@ -38,12 +39,14 @@ Installs the following:
 * Qemu-user-static
 * Qrencode
 * RsaCtfTool
+* Sliver
 * Sonic-Visualiser
 * Stegcracker
 * Steghide
 * Stegseek
 * Stegsnow
 * Stegsolve
+* Termshark
 * Tor Browser
 * Volatility 2.6
 * Volatility 3
