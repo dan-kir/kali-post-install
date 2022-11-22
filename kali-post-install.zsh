@@ -186,13 +186,9 @@ sudo apt update -y -qq
 sudo apt install -y -qq ngrok
 echo "#### Ngrok Installed ####"
 
-## DeTTECT
-sudo docker pull rabobankcdc/dettect:latest
-echo "#### DeTTECT Installed ####"
-
 ## MobSF
-sudo apt install -y -qq git python3-dev python3-venv python3-pip build-essential libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg8-dev zlib1g-dev wkhtmltopdf
-sudo apt install -y -qq openjdk-8-jdk
+sudo apt install -y -qq git python3-dev python3-venv python3-pip build-essential libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg62-turbo-dev zlib1g-dev wkhtmltopdf
+sudo apt install -y -qq openjdk-11-jdk
 cd /opt
 sudo git clone --quiet https://github.com/MobSF/Mobile-Security-Framework-MobSF.git
 cd Mobile-Security-Framework-MobSF
@@ -239,6 +235,10 @@ sudo apt install -y -qq docker.io
 sudo systemctl enable docker --now
 sudo usermod -aG docker $USER
 echo "####  Docker Installed  ####"
+
+## DeTTECT
+sudo docker pull rabobankcdc/dettect:latest
+echo "#### DeTTECT Installed ####"
 
 ## Add ~/.local/bin to $PATH
 echo 'export PATH=/home/user2/.local/bin:$PATH' >> ~/.zshrc
